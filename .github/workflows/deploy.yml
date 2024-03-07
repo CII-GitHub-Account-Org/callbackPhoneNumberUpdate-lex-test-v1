@@ -35,14 +35,13 @@ jobs:
           sudo ./aws/install --update
           sam --version
 
-      - name: Deploy Lex V2 Bot
+      - name: Deploy Lex V2 Bot # Deploy Lex V2 Bot
         run: |
           sam build
           sam deploy --stack-name callbackPhoneNumberUpdate-lex-test-v1 --s3-bucket callback-phonenumber-update-lex-test-v1 --region us-east-1 --capabilities CAPABILITY_IAM
           aws cloudformation describe-stacks --stack-name callbackPhoneNumberUpdate-lex-test-v1 --query "Stacks[0].Outputs"
           BOT_ID=$(aws cloudformation describe-stacks --stack-name callbackPhoneNumberUpdate-lex-test-v1 --query "Stacks[0].Outputs[?OutputKey=='BotId'].OutputValue" --output text)
-          echo "BOT_ID=$BOT_ID" >> $GITHUB_ENV      
-      - name: Create Lex V2 Bot Intent and Slot Type
+          echo "BOT_ID=$BOT_ID" >> $GITHUB_ENV 
         run: |
           aws lexv2-models create-intent --cli-input-json file://Intent.json --bot-id $BOT_ID --bot-version DRAFT --locale-id en_US
           aws lexv2-models create-slot-type --cli-input-json file://SlotType.json --bot-id $BOT_ID --bot-version DRAFT --locale-id en_US
