@@ -1,24 +1,36 @@
 {
-  "intentName": "FallbackIntent",
-  "description": "Default intent when no other intent matches",
-  "sampleUtterances": [
-    "I need help",
-    "I don't know what to do"
-  ],
-  "slotPriorities": [
-    {
-      "priority": 1,
-      "slotName": "MySlot"
+    "intentName": "FallbackIntent",
+    "description": "Default intent when no other intent matches",
+    "sampleUtterances": [
+        {
+            "utterance": "I need help"
+        },
+        {
+            "utterance": "I don't know what to do"
+        }
+    ],
+    "intentConfirmationSetting": {
+        "promptSpecification": {
+            "messageGroups": [
+                {
+                    "message": {
+                        "contentType": "PlainText",
+                        "content": "Are you sure?"
+                    }
+                }
+            ],
+            "maxRetries": 2,
+            "allowInterrupt": true
+        },
+        "declinationResponse": {
+            "messageGroups": [
+                {
+                    "message": {
+                        "contentType": "PlainText",
+                        "content": "Okay, I won't proceed with the action."
+                    }
+                }
+            ]
+        }
     }
-  ],
-  "intentConfirmationSetting": {
-    "promptSpecification": {
-      "message": "Are you sure?",
-      "maxRetries": 2,
-      "allowInterrupt": true
-    },
-    "declinationResponse": {
-      "message": "Okay, I won't proceed with the action."
-    }
-  }
 }
