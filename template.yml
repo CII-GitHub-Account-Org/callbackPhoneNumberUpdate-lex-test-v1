@@ -6,9 +6,9 @@ Resources:
   LexV2Bot:
     Type: AWS::Lex::Bot
     Properties:
-        Name: ${file(src/callbackPhoneNumberUpdate/Bot.json):name}
-        Description: ${file(src/callbackPhoneNumberUpdate/Bot.json):description}
-        IdleSessionTTLInSeconds: ${file(src/callbackPhoneNumberUpdate/Bot.json):idleSessionTTLInSeconds}
+        Name: !Ref name
+        Description: !Ref description
+        IdleSessionTTLInSeconds: !Ref idleSessionTTLInSeconds
         RoleArn: "arn:aws:iam::750344256621:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots_lex-bot-deployment-test-role"
         DataPrivacy: 
-          ChildDirected: ${file(src/callbackPhoneNumberUpdate/Bot.json):dataPrivacy.childDirected}
+          ChildDirected: !Ref dataPrivacy.childDirected
