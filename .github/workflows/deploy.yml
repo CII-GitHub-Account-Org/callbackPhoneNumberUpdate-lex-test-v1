@@ -38,4 +38,4 @@ jobs:
       - name: Deploy Lex V2 Bot
         run: |
           sam build
-          sam deploy --stack-name callbackPhoneNumberUpdate-lex-test-v1 --s3-bucket callback-phonenumber-update-lex-test-v1 --region us-east-1 --capabilities CAPABILITY_IAM --parameter-overrides file://src/callbackPhoneNumberUpdate/Bot.json
+          sam deploy --stack-name callbackPhoneNumberUpdate-lex-test-v1 --s3-bucket callback-phonenumber-update-lex-test-v1 --region us-east-1 --capabilities CAPABILITY_IAM

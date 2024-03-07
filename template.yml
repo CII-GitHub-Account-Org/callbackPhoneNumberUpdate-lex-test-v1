@@ -6,9 +6,9 @@ Resources:
   LexV2Bot:
     Type: AWS::Lex::Bot
     Properties:
-        Name: !Ref name
-        Description: !Ref description
-        IdleSessionTTLInSeconds: !Ref idleSessionTTLInSeconds
+        Name: callbackPhoneNumberUpdateLexTestV1
+        Description: Callback Phone Number Update Lex Test V1
+        IdleSessionTTLInSeconds: 300
         RoleArn: "arn:aws:iam::750344256621:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots_lex-bot-deployment-test-role"
         DataPrivacy: 
-          ChildDirected: !Ref dataPrivacy.childDirected
+          ChildDirected: false
