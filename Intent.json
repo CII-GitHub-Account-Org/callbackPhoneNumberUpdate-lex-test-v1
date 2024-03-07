@@ -1,5 +1,5 @@
 {
-    "intentName": "FallbackIntent-test",
+    "intentName": "FallbackIntentTest",
     "description": "Default intent when no other intent matches",
     "sampleUtterances": [
         {
