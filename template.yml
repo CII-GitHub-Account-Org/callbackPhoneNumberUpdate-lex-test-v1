@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: An AWS Serverless Specification template describing your function.
+
+Resources:
+  LexV2Bot:
+    Type: AWS::Lex::Bot
+    Properties:
+      BotName: callbackPhoneNumberUpdate-lex-test-v1
+      BotVersion: DRAFT
+      IdleSessionTTLInSeconds: 300
+      RoleArn: "arn:aws:iam::750344256621:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots_lex-bot-deployment-test-role"
+      DataPrivacy: 
+        ChildDirected: false

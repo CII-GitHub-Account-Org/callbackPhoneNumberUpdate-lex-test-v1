@@ -1,0 +1,35 @@
+name: Deploy Lex V2 Bot
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-region: us-east-1
+        role-to-assume: arn:aws:iam::123456789012:role/GitHubOIDC
+        role-duration-seconds: 1200
+        role-session-name: GitHubActions
+
+    - name: Install AWS SAM CLI
+      run: |
+        curl "https://d1vvhvl2y92vvt.cloudfront.net/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip awscliv2.zip
+        sudo ./aws/install
+        sam --version
+
+    - name: Deploy Lex V2 Bot
+      run: |
+        cd src/callbackPhoneNumberUpdate
+        sam build
+        sam deploy --guided
