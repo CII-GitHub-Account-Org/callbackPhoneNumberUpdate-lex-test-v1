@@ -1,0 +1,24 @@
+{
+  "intentName": "FallbackIntent",
+  "description": "Default intent when no other intent matches",
+  "sampleUtterances": [
+    "I need help",
+    "I don't know what to do"
+  ],
+  "slotPriorities": [
+    {
+      "priority": 1,
+      "slotName": "MySlot"
+    }
+  ],
+  "intentConfirmationSetting": {
+    "promptSpecification": {
+      "message": "Are you sure?",
+      "maxRetries": 2,
+      "allowInterrupt": true
+    },
+    "declinationResponse": {
+      "message": "Okay, I won't proceed with the action."
+    }
+  }
+}

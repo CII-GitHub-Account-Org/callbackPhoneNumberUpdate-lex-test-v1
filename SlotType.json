@@ -1,0 +1,19 @@
+{
+  "slotTypeName": "MySlot",
+  "description": "My Slot",
+  "slotTypeValues": [
+    {
+      "sampleValue": {
+        "value": "Sample Value 1"
+      }
+    },
+    {
+      "sampleValue": {
+        "value": "Sample Value 2"
+      }
+    }
+  ],
+  "valueSelectionSetting": {
+    "resolutionStrategy": "TOP_RESOLUTION"
+  }
+}

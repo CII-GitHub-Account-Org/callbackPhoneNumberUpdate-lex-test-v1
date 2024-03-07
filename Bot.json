@@ -1,0 +1,9 @@
+{
+  "botName": "callbackPhoneNumberUpdateLexTestV1",
+  "description": "Callback Phone Number Update Lex Test V1",
+  "idleSessionTTLInSeconds": 300,
+  "roleArn": "arn:aws:iam::750344256621:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots_lex-bot-deployment-test-role",
+  "dataPrivacy": {
+    "childDirected": false
+  }
+}

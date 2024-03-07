@@ -1,5 +1,5 @@
 {
-    "intentName": "FallbackIntent",
+    "name": "FallbackIntent",
     "identifier": "FALLBCKINT",
     "description": "Default intent when no other intent matches",
     "parentIntentSignature": "AMAZON.FallbackIntent",
