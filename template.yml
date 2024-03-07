@@ -12,6 +12,10 @@ Resources:
         RoleArn: "arn:aws:iam::750344256621:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots_lex-bot-deployment-test-role"
         DataPrivacy: 
           ChildDirected: false #  true | false
+Outputs:
+  BotId:
+    Description: The ID of the Lex bot
+    Value: !GetAtt LexV2Bot.Id
   # MyIntent:
   #   Type: AWS::Lex::Bot Intent
   #   Name: FallbackIntent
