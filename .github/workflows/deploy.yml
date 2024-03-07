@@ -45,5 +45,11 @@ jobs:
       - name: Create Lex V2 Bot Intent and Slot Type
         run: |
           aws lexv2-models create-bot-locale --bot-id $BOT_ID --bot-version DRAFT --locale-id en_US --description "English US locale" --nlu-intent-confidence-threshold 0.00 --voice-settings voiceId="Joanna",engine="standard"
+          
+          while [[ $(aws lexv2-models describe-bot-locale --bot-id $BOT_ID --bot-version DRAFT --locale-id en_US --query 'botLocaleStatus') != '"Ready"' ]]; do 
+            echo "Waiting for bot locale to be ready..."
+            sleep 10
+          done
+
           aws lexv2-models create-intent --cli-input-json file://Intent.json --bot-id $BOT_ID --bot-version DRAFT --locale-id en_US
           aws lexv2-models create-slot-type --cli-input-json file://SlotType.json --bot-id $BOT_ID --bot-version DRAFT --locale-id en_US
