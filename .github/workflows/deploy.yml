@@ -28,7 +28,7 @@ jobs:
           role-duration-seconds: 900 # optional, defaults to 3600 seconds
           aws-region: us-east-1 # use your region here.
 
-      - name: Install AWS SAM CLI
+      - name: Install AWS SAM CLI # Install AWS SAM CLI
         run: |
           curl "https://d1vvhvl2y92vvt.cloudfront.net/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
           unzip awscliv2.zip
