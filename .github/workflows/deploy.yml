@@ -41,5 +41,5 @@ jobs:
           sam deploy --stack-name callbackPhoneNumberUpdate-lex-test-v1 --s3-bucket callback-phonenumber-update-lex-test-v1 --region us-east-1 --capabilities CAPABILITY_IAM
       - name: Create Lex V2 Bot Intent and Slot Type
         run: |
-          aws lexv2-models create-intent --cli-input-json file://Intent.json
-          aws lexv2-models create-slot-type --cli-input-json file://SlotType.json
+          aws lexv2-models create-intent --cli-input-json file://Intent.json --bot-id C6MOFTIWM7 --bot-version DRAFT --locale-id en_US
+          aws lexv2-models create-slot-type --cli-input-json file://SlotType.json --bot-id C6MOFTIWM7 --bot-version DRAFT --locale-id en_US
