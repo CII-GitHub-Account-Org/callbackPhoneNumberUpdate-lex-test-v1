@@ -37,6 +37,5 @@ jobs:
 
       - name: Deploy Lex V2 Bot
         run: |
-          cd src/callbackPhoneNumberUpdate
           sam build
           sam deploy --guided
