@@ -12,28 +12,28 @@ Resources:
         RoleArn: "arn:aws:iam::750344256621:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots_lex-bot-deployment-test-role"
         DataPrivacy: 
           ChildDirected: false
-  MyIntent:
-    Type: AWS::Lex::Intent
-    Properties:
-      Name: FallbackIntent
-      Description: Default intent when no other intent matches
-      SampleUtterances:
-        - "sample utterance"
-      Slots:
-        - Name: c
-          SlotType: AMAZON.Number
-          SlotConstraint: Required
-          ValueElicitationSetting:
-            PromptSpecification:
-              Messages:
-                - ContentType: PlainText
-                  Content: "Please provide the value for amount"
+  # MyIntent:
+  #   Type: AWS::Lex::Intent
+  #   Properties:
+  #     Name: FallbackIntent
+  #     Description: Default intent when no other intent matches
+  #     SampleUtterances:
+  #       - "sample utterance"
+  #     Slots:
+  #       - Name: c
+  #         SlotType: AMAZON.Number
+  #         SlotConstraint: Required
+  #         ValueElicitationSetting:
+  #           PromptSpecification:
+  #             Messages:
+  #               - ContentType: PlainText
+  #                 Content: "Please provide the value for amount"
 
-  MySlotType:
-    Type: AWS::Lex::SlotType
-    Properties:
-      Name: MySlotType
-      Description: My Slot Type
-      SlotTypeValues:
-        - SampleValue:
-            Value: "200"
+  # MySlotType:
+  #   Type: AWS::Lex::SlotType
+  #   Properties:
+  #     Name: MySlotType
+  #     Description: My Slot Type
+  #     SlotTypeValues:
+  #       - SampleValue:
+  #           Value: "200"
