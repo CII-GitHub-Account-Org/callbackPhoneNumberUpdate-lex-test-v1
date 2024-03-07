@@ -14,8 +14,9 @@
             "messageGroups": [
                 {
                     "message": {
-                        "contentType": "PlainText",
-                        "content": "Are you sure?"
+                        "plainTextMessage": {
+                            "value": "Are you sure?"
+                        }
                     }
                 }
             ],
@@ -26,8 +27,9 @@
             "messageGroups": [
                 {
                     "message": {
-                        "contentType": "PlainText",
-                        "content": "Okay, I won't proceed with the action."
+                        "plainTextMessage": {
+                            "value": "Okay, I won't proceed with the action."
+                        }
                     }
                 }
             ]
