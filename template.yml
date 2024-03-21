@@ -15,7 +15,7 @@ Resources:
 Outputs:
   BotId:
     Description: The ID of the Lex bot #  The ID of the Lex bot
-    Value: !GetAtt LexV2Bot.Id
+    Value: !GetAtt LexV2Bot.Id #  The ID of the Lex bot
   # MyIntent:
   #   Type: AWS::Lex::Bot Intent
   #   Name: FallbackIntent
