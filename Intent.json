@@ -12,9 +12,6 @@
             "utterance": "Can you show me my account balance?"
         },
         {
-            "utterance": "How much money do I have in my account?"
-        },
-        {
             "utterance": "Tell me the current balance in my account."
         },
         {
