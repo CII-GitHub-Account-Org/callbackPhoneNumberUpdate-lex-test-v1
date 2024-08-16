@@ -1,12 +1,30 @@
 {
-    "intentName": "FallbackIntentTest",
+    "intentName": "AccountBalance",
     "description": "Default intent when no other intent matches",
     "sampleUtterances": [
         {
-            "utterance": "I need help"
+            "utterance": "What is my account balance?"
         },
         {
-            "utterance": "I don't know what to do"
+            "utterance": "Can you tell me my account balance?"
+        },
+        {
+            "utterance": "Can you show me my account balance?"
+        },
+        {
+            "utterance": "How much money do I have in my account?"
+        },
+        {
+            "utterance": "Tell me the current balance in my account."
+        },
+        {
+            "utterance": "How much money do I have in my account?"
+        },
+        {
+            "utterance": "what's the balance in my account?"
+        },
+        {
+            "utterance": "What's my balance?"
         }
     ],
     "intentConfirmationSetting": {
@@ -15,7 +33,7 @@
                 {
                     "message": {
                         "plainTextMessage": {
-                            "value": "Are you sure?"
+                            "value": "Are you sure you want to check your balance?"
                         }
                     }
                 }
