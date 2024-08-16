@@ -3,7 +3,7 @@ name: Deploy Lex V2 Bot
 on:
   push:
     branches:
-      - main #`main` branch
+      - main
 
 jobs:
   deploy:
