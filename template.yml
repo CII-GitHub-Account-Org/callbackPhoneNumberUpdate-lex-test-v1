@@ -16,34 +16,3 @@ Outputs:
   BotId:
     Description: The ID of the Lex bot #  The ID of the Lex bot
     Value: !GetAtt LexV2Bot.Id #  The ID of the Lex bot
-  # MyIntent:
-  #   Type: AWS::Lex::Bot Intent
-  #   Name: FallbackIntent
-  #   Description: Default intent when no other intent matches
-
-
-  # MyIntent:
-  #   Type: AWS::Lex::Intent
-  #   Properties:
-  #     Name: FallbackIntent
-  #     Description: Default intent when no other intent matches
-  #     SampleUtterances:
-  #       - "sample utterance"
-  #     Slots:
-  #       - Name: c
-  #         SlotType: AMAZON.Number
-  #         SlotConstraint: Required
-  #         ValueElicitationSetting:
-  #           PromptSpecification:
-  #             Messages:
-  #               - ContentType: PlainText
-  #                 Content: "Please provide the value for amount"
-
-  # MySlotType:
-  #   Type: AWS::Lex::SlotType
-  #   Properties:
-  #     Name: MySlotType
-  #     Description: My Slot Type
-  #     SlotTypeValues:
-  #       - SampleValue:
-  #           Value: "200"
